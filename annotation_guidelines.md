@@ -354,7 +354,7 @@ Annotate every instance of a health plan beneficiary number.
 ### SOCIAL SECURITY NUMBERS
 
 Annotate every instance of a social security number (SSN). 
-These are generally nine digits, separated into a group of three, then two, then four by hyphens or spaces (e.g. 123-45-6789).
+These are generally nine digits, separated into a group of three, then two, then four by hyphens or spaces (for example, **123-45-6789**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->).
 
 Note that partial SSNs (such as just the last four digits) should also be labeled. 
 
