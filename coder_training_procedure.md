@@ -26,7 +26,8 @@ It includes the following steps:
 1. Background reading on HIPAA, and on the specific coding ontology for this project
 2. A quiz to test understanding of HIPAA's definition of PHI
 3. An overview of how to use brat, the Arcus text annotation tool
-4. Instructions for completing the reliability test, the last step in the new coder training procedure
+4. Instructions for completing coding practice on five training notes
+5. Instructions for completing the reliability check, the last step in the new coder training procedure
 
 There is also additional information about what to expect after you pass the reliability test (regular check-in meetings with other coders) and a note about plans to test for coder reliability on the full dataset after annotation is complete.
 
@@ -240,7 +241,7 @@ Once you're done with the five practice notes, you should have a meeting with yo
 
 To make sure all coders are using the ontology the same way, new coders need to pass a reliability test before they begin annotating new notes. 
 
-To complete your reliability test, log in to your Arcus lab, open the brat annotation tool, and rememeber to log in. 
+To complete your reliability test, log in to your Arcus lab, open the brat annotation tool, and remember to log in. 
 
 Navigate to your assigned reliability test directory. 
 There will be ten note documents. 
