@@ -453,7 +453,7 @@ Don't over-use the Unsure option -- if you find you frequently feel like you are
 Please bring that to the attention of the rest of the research team, and thank you for contributing to the improvement of the coding process! 
 
 <div class = "important">
-<b style="color: rgb(var(--color-highlight));">Tip</b><br>
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 The "Unsure" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
 Do not bother to code unsure spans with the more fine-grained label options; just use the coarse category that's your best guess and check "Unsure".
@@ -462,24 +462,26 @@ Do not bother to code unsure spans with the more fine-grained label options; jus
 
 ### NonIndentifying
 
-Sometimes notes contain spans that do match the above categories, but are completely unrelated to the patient. 
+Sometimes notes contain spans that do match the ontology categories, but are completely unrelated to the patient. 
 In these cases, the span should still be annotated with the relevant label, but you should also check the box "NonIdentifying". 
 
 ![Brat annotation edit window showing the text "60", with the label "AGES" selected, and the "NonIdentifying" box checked.](media/brat_nonidentifying.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
 
 The most common example of this is template text, such as in triage forms. 
 The person conducting the triage runs though a checklist, and the results of that checklist are saved in a note. 
-Items on the checklist might be things like "Fever in infant < 12 weeks" -- the span "< 12 weeks" is an age, but it's not about the patient at all, it's just a generic cutoff. 
+Items on the checklist might be things like "Fever in infant **< 12 weeks**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->".
+The span "< 12 weeks" is an age, but it's not about the patient at all, it's just a generic cutoff. 
 
 Another example occurs in references to general guidelines or standards. 
-For example, the note "Recommended catch up schedule (https://www.cdc.gov/vaccines/schedules/hcp/imz/catchup.html) for missed vaccines" includes a URL, so it should be annotated with the label WEB URLS, but it should also be checked as "NonIdentifying" since that URL is not identifying the patient, it's just a reference. 
+For example, the note "Recommended catch up schedule (**www.cdc.gov/vaccines/schedules/hcp/imz/catchup.html**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->) for missed vaccines" includes a URL, so it should be annotated with the label WEB URLS, but it should also be checked as "NonIdentifying" since that URL is not identifying the patient, it's just a reference. 
 It doesn't provide information about who the patient is (or their relatives, employer, or household members) or any information about where they received care. 
 
-The note "AAP recommends ASD screening for children with no productive language at 18mo" would have two spans that should be checked "NonIdentifying": 
-"AAP" should get the label NAMES (it's an organization, the American Academy of Pediatrics), and "18mo" should get AGES (note that "ASD" is an abbreviation for Autism Spectrum Disorder and should not be annotated), and both would be checked "NonIdentifying". 
+The note "**AAP**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> recommends ASD screening for children with no productive language at **18m**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" would have two spans that should be checked "NonIdentifying": 
+"AAP" should get the label NAMES (it's an organization, the American Academy of Pediatrics), and "18m" should get AGES, and both would be checked "NonIdentifying". 
+(Note that "ASD" is an abbreviation for Autism Spectrum Disorder and should not be annotated.)
 
 <div class = "important">
-<b style="color: rgb(var(--color-highlight));">Tip</b><br>
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 The "NonIdentifying" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
 Do not bother to code nonidentifying spans with the more fine-grained label options; just use the coarse categories and check "NonIdentifying".
