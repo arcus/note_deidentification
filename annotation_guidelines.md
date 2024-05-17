@@ -14,6 +14,8 @@ comment:  This is the full description of the ontology used to annotate identify
 @version_history 
 No previous versions.
 @end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Annotation Guidelines
