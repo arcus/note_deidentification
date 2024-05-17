@@ -213,20 +213,16 @@ Click on the image to play the demo.
 
 </figure>
 
-## Reliability Test
+## Practice Coding
 
-To make sure all coders are using the ontology the same way, new coders need to pass a reliability test before they begin annotating new notes. 
+There will be five notes for you to practice coding on. 
+You are encouraged to seek help and ask for clarification during the practice coding; use this as an opportunity to make sure you understand the ontology guidelines.
 
-To complete your reliability test, log in at arcus.chop.edu, and then select "My Labs" and click to open your Arcus Lab. 
+To start the practice coding, log in at arcus.chop.edu, and then select "My Labs" and click to open your Arcus Lab. 
 Click the toggle under Lab Status to turn the lab on, and then (once it's available) select Note Annotator from under Lab Tools, and enter the brat username and password. 
 Also open the [Ontology Guidelines](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/Arcus_Labs_Orientation/deid_notes_instructions/deid_notes_annotation_guidelines.md#1) and keep that available in another tab, so you can reference it as you work.
-
-Navigate to your assigned reliability test directory. 
-There will be five note documents. 
-For each document you will add, remove, and modify annotations as needed to bring it in line with the Ontology Guidelines. 
+For each document you will add, remove, and modify annotations as needed to bring it in line with the Ontology Guidelines.
 As you work, make a note of any instructions in the guidelines that seems unclear to you -- part of the coder training process is improving the materials!
-
-It will likely take you about an hour to annotate all five notes. 
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -238,10 +234,22 @@ Remember, you can also use the "Unsure" option to flag a particular annotation f
 
 </div>
 
-Once you've finished annotating all five notes, let your supervisor know. 
+Once you're done with the five practice notes, you should have a meeting with your supervisor and/or other coders to discuss any differences between your annotations and the standard annotations for those five notes.
+
+## Reliability Check
+
+To make sure all coders are using the ontology the same way, new coders need to pass a reliability test before they begin annotating new notes. 
+
+To complete your reliability test, log in to your Arcus lab, open the brat annotation tool, and rememeber to log in. 
+
+Navigate to your assigned reliability test directory. 
+There will be ten note documents. 
+For each document you will add, remove, and modify annotations as needed to bring it in line with the Ontology Guidelines. 
+
+Once you've finished annotating all ten reliability check notes, let your supervisor know. 
 They will set up a meeting with you to ask about your experience with the coding training, talk through any questions you have, and review any places where your annotations differ from the standard set.
 
-If your annotations are too different from the standard set, you'll be asked to re-do the reliability test on five new notes. 
+If your annotations are too different from the standard set, you will be asked to repeat the reliability check.
 
 ## Check-ins
 
