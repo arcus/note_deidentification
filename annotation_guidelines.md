@@ -418,6 +418,8 @@ This category rarely occurs.
 ### BIOMETRIC IDENTIFIERS
 
 Annotate any biometric identifiers, like fingerprints, retina scans, or DNA. 
+Note that mention of a genetic condition is not DNA. 
+For example, "Pt has Fragile X" should not be labeled as BIOMETRIC IDENTIFIERS.
 
 This category rarely occurs. 
 
