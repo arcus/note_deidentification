@@ -474,3 +474,5 @@ https://lhncbc.nlm.nih.gov/scrubber/annotation/pdf.papers/Guidelines.2016.06.28.
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765667/
 
 https://www.nature.com/articles/s41746-020-0258-y#MOESM1 
+
+https://github.com/obi-ml-public/ehr_deidentification/blob/main/AnnotationGuidelines.md
