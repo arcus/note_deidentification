@@ -417,7 +417,7 @@ This category rarely occurs.
 
 ### BIOMETRIC IDENTIFIERS
 
-Annotate any biometric identifiers, like fingerprints, retina scans, or DNA.
+Annotate any biometric identifiers, like fingerprints, retina scans, or DNA. 
 
 This category rarely occurs. 
 
@@ -434,6 +434,8 @@ These show up as check boxes under the list of labels in the brat annotator.
 
 The options are "Unsure" and "NonIdentifying".
 
+![Checkboxes for "NonIdentifying" and "Unsure" show up in the "Entity attributes" section of the brat annotation edit window.](media/brat_attributes.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
+
 ### Unsure
 
 Clinical notes are hard to read, and you will occasionally encounter spans where you can't tell what they should be labeled as (is this an MRN or an account number?), or if they should even be labeled at all (maybe it's actually just a diagnosis code?). 
@@ -441,17 +443,25 @@ Clinical notes are hard to read, and you will occasionally encounter spans where
 When you encounter a span where you're not sure whether it should be annotated or not, or if you think it should be annotated but you can't tell which label to use, then label it with your best guess and check the "Unsure" option. 
 This will flag it in the data, and it can be included in regular review and discussion meetings to talk through tricky annotations.
 
+![Brat annotation edit window showing the text "MAR", with the label "NAMES" selected, and the "Unsure" box checked.](media/brat_unsure.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
+
 Don't over-use the Unsure option -- if you find you frequently feel like you are unsure of your annotations, that suggests there's a problem with the ontology, the coding training, or both. 
 Please bring that to the attention of the rest of the research team, and thank you for contributing to the improvement of the coding process! 
 
-**Tip**:
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Tip</b><br>
+
 The "Unsure" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
 Do not bother to code unsure spans with the more fine-grained label options; just use the coarse category that's your best guess and check "Unsure".
+
+</div>
 
 ### NonIndentifying
 
 Sometimes notes contain spans that do match the above categories, but are completely unrelated to the patient. 
 In these cases, the span should still be annotated with the relevant label, but you should also check the box "NonIdentifying". 
+
+![Brat annotation edit window showing the text "60", with the label "AGES" selected, and the "NonIdentifying" box checked.](media/brat_nonidentifying.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
 
 The most common example of this is template text, such as in triage forms. 
 The person conducting the triage runs though a checklist, and the results of that checklist are saved in a note. 
@@ -464,9 +474,13 @@ It doesn't provide information about who the patient is (or their relatives, emp
 The note "AAP recommends ASD screening for children with no productive language at 18mo" would have two spans that should be checked "NonIdentifying": 
 "AAP" should get the label NAMES (it's an organization, the American Academy of Pediatrics), and "18mo" should get AGES (note that "ASD" is an abbreviation for Autism Spectrum Disorder and should not be annotated), and both would be checked "NonIdentifying". 
 
-**Tip**:
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Tip</b><br>
+
 The "NonIdentifying" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
 Do not bother to code nonidentifying spans with the more fine-grained label options; just use the coarse categories and check "NonIdentifying".
+
+</div>
 
 ## References
 
