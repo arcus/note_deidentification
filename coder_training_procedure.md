@@ -245,7 +245,15 @@ To complete your reliability test, log in to your Arcus lab, open the brat annot
 
 Navigate to your assigned reliability test directory. 
 There will be ten note documents. 
-For each document you will add, remove, and modify annotations as needed to bring it in line with the Ontology Guidelines. 
+For each document you will add, remove, and modify annotations as needed to bring it in line with the Ontology Guidelines.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+For your reliability check coding, it's important that you work independently -- do not ask others for help, or look at others' coding files. 
+You'll have an opportunity to discuss questions at the end, but it's important that you complete all of your annotations on your own for this phase.  
+
+</div>
 
 Once you've finished annotating all ten reliability check notes, let your supervisor know. 
 They will set up a meeting with you to ask about your experience with the coding training, talk through any questions you have, and review any places where your annotations differ from the standard set.
