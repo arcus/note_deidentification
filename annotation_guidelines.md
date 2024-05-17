@@ -472,3 +472,5 @@ Do not bother to code nonidentifying spans with the more fine-grained label opti
 https://lhncbc.nlm.nih.gov/scrubber/annotation/pdf.papers/Guidelines.2016.06.28.pdf
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765667/
+
+https://www.nature.com/articles/s41746-020-0258-y#MOESM1 
