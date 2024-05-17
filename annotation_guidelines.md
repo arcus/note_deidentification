@@ -81,6 +81,7 @@ Some of the most frequent abbreviations are:
 - Hx = history (as in, a history of respiratory infection)
 - Sx = symptoms
 - Rx = treatment or prescription 
+- HPI = history of present illness
 - and [many more](https://medlineplus.gov/appendixb.html)!
 
 You'll also notice surprising or confusing formatting in notes, often the result of forms or templates. 
