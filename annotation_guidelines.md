@@ -58,23 +58,42 @@ PHI is "individually identifiable health information".
 
 ## General tips
 
-**Distinguish health information from identity information.** 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Distinguish health information from identity information</b><br>
+
 HIPAA protects PHI, but health information that's not linkable to any individual person (de-identified) is not protected. 
 The goal when de-identifying clinical data is to remove or mask all of the information that could be used to *identify* who the note is about (and [HIPAA provides specific guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html) about this) while keeping as much of the *health* information as possible.
 
-**HIPAA is the baseline.** 
+</div>
+
+<div class = "version-update">
+<b style="color: rgb(var(--color-highlight));">HIPAA is the baseline</b><br>
+
 You may be familiar already with the [18 categories of identifying information listed under the HIPAA safe harbor method](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#safeharborguidance). 
 Most of the text you'll be annotating will fall into one of those categories, but we're also annotating some things that are *not* required to be removed under HIPAA, such as provider names, ages under 90, and location information coarser than state. 
+
 It's crucial that we cover all the HIPAA categories, but know that these guidelines also intentionally extend beyond HIPAA in a few ways. 
 
-**When in doubt, annotate.** 
+</div>
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">When in doubt, annotate</b><br>
+
 If you're not sure whether or not a span is identifying, annotate it (and use the [unsure](#unsure) option to flag it for review).
 It's always better to over-annotate than under-annotate.
 
-**Shortened versions still count.** 
+</div>
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Shortened versions still count</b><br>
+
 Things like initials, last four digits of social security, partial usernames, etc. all still count and should be annotated. 
 
-**There's a lot of jargon.** 
+</div>
+
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">There's a lot of jargon</b><br>
+
 Clinical notes are often written in a combination of medical terminology and shorthand that can be very hard to parse for folks that aren't used to it. 
 Some of the most frequent abbreviations are: 
 
@@ -88,11 +107,18 @@ Some of the most frequent abbreviations are:
 
 You'll also notice surprising or confusing formatting in notes, often the result of forms or templates. 
 
-**Your input matters!** 
+</div>
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">Your input matters!</b><br>
+
 As a coder, you will spend a lot of time reading the text of the notes -- much more time than most other researchers on the project, probably. 
 You are in a uniquely valuable position to be able to notice unexpected patterns or problems in the text data, or in the annotation procedures.
-If you think something is off, please bring it to the attention of the rest of the team. 
+If you think something is off, please bring it to the attention of the rest of the team.
+
 Thank you for practicing with a questioning attitude! 
+
+</div>
 
 ## Ontology
 
@@ -436,36 +462,16 @@ This category rarely occurs.
 For each annotation, you also have the option to add one or more categories in addition to the label. 
 These show up as check boxes under the list of labels in the brat annotator. 
 
-The options are "Unsure" and "NonIdentifying".
+The options are "NonIdentifying" and "Unsure".
 
-![Checkboxes for "NonIdentifying" and "Unsure" show up in the "Entity attributes" section of the brat annotation edit window.](media/brat_attributes.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
-
-### Unsure
-
-Clinical notes are hard to read, and you will occasionally encounter spans where you can't tell what they should be labeled as (is this an MRN or an account number?), or if they should even be labeled at all (maybe it's actually just a diagnosis code?). 
-
-When you encounter a span where you're not sure whether it should be annotated or not, or if you think it should be annotated but you can't tell which label to use, then label it with your best guess and check the "Unsure" option. 
-This will flag it in the data, and it can be included in regular review and discussion meetings to talk through tricky annotations.
-
-![Brat annotation edit window showing the text "MAR", with the label "NAMES" selected, and the "Unsure" box checked.](media/brat_unsure.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
-
-Don't over-use the Unsure option -- if you find you frequently feel like you are unsure of your annotations, that suggests there's a problem with the ontology, the coding training, or both. 
-Please bring that to the attention of the rest of the research team, and thank you for contributing to the improvement of the coding process! 
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-The "Unsure" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
-Do not bother to code unsure spans with the more fine-grained label options; just use the coarse category that's your best guess and check "Unsure".
-
-</div>
+![Checkboxes for "NonIdentifying" and "Unsure" show up in the "Entity attributes" section of the brat annotation edit window, beneath the ontology labels.](media/brat_attributes.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 ### NonIndentifying
 
 Sometimes notes contain spans that do match the ontology categories, but are completely unrelated to the patient. 
 In these cases, the span should still be annotated with the relevant label, but you should also check the box "NonIdentifying". 
 
-![Brat annotation edit window showing the text "60", with the label "AGES" selected, and the "NonIdentifying" box checked.](media/brat_nonidentifying.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
+![Brat annotation edit window showing the text "60", with the label "AGES" selected, and the "NonIdentifying" box checked.](media/brat_nonidentifying.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 The most common example of this is template text, such as in triage forms. 
 The person conducting the triage runs though a checklist, and the results of that checklist are saved in a note. 
@@ -485,6 +491,26 @@ The note "**AAP**<!-- style="background-color: rgba(var(--color-highlight), .2)"
 
 The "NonIdentifying" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
 Do not bother to code nonidentifying spans with the more fine-grained label options; just use the coarse categories and check "NonIdentifying".
+
+</div>
+
+### Unsure
+
+Clinical notes are hard to read, and you will occasionally encounter spans where you can't tell what they should be labeled as (is this an MRN or an account number?), or if they should even be labeled at all (maybe it's actually just a diagnosis code?). 
+
+When you encounter a span where you're not sure whether it should be annotated or not, or if you think it should be annotated but you can't tell which label to use, then label it with your best guess and check the "Unsure" option. 
+This will flag it in the data, and it can be included in regular review and discussion meetings to talk through tricky annotations.
+
+![Brat annotation edit window showing the text "MAR", with the label "NAMES" selected, and the "Unsure" box checked.](media/brat_unsure.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
+
+Don't over-use the Unsure option -- if you find you frequently feel like you are unsure of your annotations, that suggests there's a problem with the ontology, the coding training, or both. 
+Please bring that to the attention of the rest of the research team, and thank you for contributing to the improvement of the coding process! 
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+The "Unsure" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
+Do not bother to code unsure spans with the more fine-grained label options; just use the coarse category that's your best guess and check "Unsure".
 
 </div>
 
