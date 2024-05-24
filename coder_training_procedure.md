@@ -194,7 +194,7 @@ Step 4: Annotate!
 ----
 
 Once you have a note open, you can select a single word by double-clicking it, or you can use click and drag to highlight a multi-word phrase.  
-In the example shown, we highlight a couple of significant words and then add an annotation appropriate for each one.
+In the example shown (which is fake content, not real PHI), we highlight a couple of significant words and then add an annotation appropriate for each one.
 
 <div style="display:none">
 
@@ -204,7 +204,7 @@ In the example shown, we highlight a couple of significant words and then add an
 
 <figure>
 
-  <img src="https://github.com/arcus/Arcus_Labs_Orientation/blob/main/media/annotation_example.png?raw=true" height="657" width="538" alt="Clicking on a word allows you to add an annotation like 'anxiety' or 'depression'." data-alt="https://github.com/arcus/Arcus_Labs_Orientation/blob/main/media/annotation_example.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/note_deidentification/blob/main/media/ontology_demo.png?raw=true" height="657" width="538" alt="Clicking on a word allows you to add an annotation like 'anxiety' or 'depression'." data-alt="https://github.com/arcus/note_deidentification/blob/main/media/ontology_demo.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">
 
