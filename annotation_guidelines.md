@@ -203,10 +203,17 @@ Examples of STAFF, with the span bolded:
 Examples of HOSPITAL, with the span bolded:
 
 - Seen by Dr. Gloria de la Vega, MD, **Children's Hospital of Philadelphia**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> ADHD Management Center
+- **CHOP**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> Pediatrics
+- Pt got treatment at **Cincinnati**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> before coming here, see transfer notes.
 
+(Context matters -- in this example "Cincinnati" refers to the hospital "Cincinnati Children's Hospital", not the city. 
+In a note saying "Pt lives in Cincinnati", it would instead be labeled as CITY.)
+
+A DEPARTMENT is any sub-unit within a hospital, including programs, services, and centers. 
 Examples of DEPARTMENT, with the span bolded:
 
 - Seen by Dr. Gloria de la Vega, MD, Children's Hospital of Philadelphia **ADHD Management Center**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- CHOP **Pediatrics**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
 
 Generic departments -- in other words, departments that you might expect to exist with that same name at most hospitals, like ER, Cardiology, NICU -- should still be labeled, but also be marked as "[NonIdentifying](#nonindentifying)". 
 For example, in the note "Pt came to **ER**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> for persistent fever (4 days), admitted to **PICU**<!-- style="background-color: rgba(var(--color-highlight), .2)"-->" both "ER" and "PICU" would have "NonIdentifying" checked as well, since those are generic names. 
@@ -356,7 +363,6 @@ Examples of OTHER MISC, with the span bolded:
 - Pt complains of BL wrist stiffness and pain. She is an **Olympic swimmer (won two gold and two silver medals in the 2016 games!)**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->. Work closely with both patient and coach to develop a treatment plan that takes her training into account. 
 - His aunt is the **first recipient of the Nobel Peace Prize**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> in this decade.
 
-
 ### TELEPHONE NUMBERS
 
 Annotate every instance of a telephone number. 
@@ -492,16 +498,8 @@ For example, the note "Recommended catch up schedule (**www.cdc.gov/vaccines/sch
 It doesn't provide information about who the patient is (or their relatives, employer, or household members) or any information about where they received care. 
 
 The note "**AAP**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> recommends ASD screening for children with no productive language at **18m**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" would have two spans that should be checked "NonIdentifying": 
-"AAP" should get the label NAMES (it's an organization, the American Academy of Pediatrics), and "18m" should get AGES, and both would be checked "NonIdentifying". 
+"AAP" (the American Academy of Pediatrics) should get the label ORGANIZATION, and "18m" should get AGES, and both would be checked "NonIdentifying". 
 (Note that "ASD" is an abbreviation for Autism Spectrum Disorder and should not be annotated.)
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-The "NonIdentifying" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
-Do not bother to code nonidentifying spans with the more fine-grained label options; just use the coarse categories and check "NonIdentifying".
-
-</div>
 
 ### Unsure
 
@@ -514,14 +512,6 @@ This will flag it in the data, and it can be included in regular review and disc
 
 Don't over-use the Unsure option -- if you find you frequently feel like you are unsure of your annotations, that suggests there's a problem with the ontology, the coding training, or both. 
 Please bring that to the attention of the rest of the research team, and thank you for contributing to the improvement of the coding process! 
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-The "Unsure" option is only available at the coarse coding levels (for example, NAMES, but not PATIENT or STAFF).
-Do not bother to code unsure spans with the more fine-grained label options; just use the coarse category that's your best guess and check "Unsure".
-
-</div>
 
 ## References
 
