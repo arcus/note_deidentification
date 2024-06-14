@@ -291,6 +291,13 @@ Annotate every instance of age.
 Note that HIPAA does not consider age to be PII unless it is 90 or greater, but we're still labeling every instance of age.
 When HIPAA-protected ages occur (anything 90 or greater), then instead of using the label AGES, use AGE-90PLUS.
 
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Ages under 90</b><br>
+
+Even though we're not explicitly marking ages under 90 as "[NonIdentifying](#nonindentifying)", we have the option to do that systematically after the fact.
+
+</div>
+
 When age is listed with units (like year/month/week/day), the span should include the number and units, but not the word "old". 
 For ranges (for example, "15-18mos"), the span is the whole range, including both numbers and the hyphen (and units, if applicable).
 Examples of age, with the span bolded: 
