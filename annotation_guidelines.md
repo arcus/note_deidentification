@@ -486,7 +486,7 @@ The options are "NonIdentifying" and "Unsure".
 Sometimes notes contain spans that do match the ontology categories, but are completely unrelated to the patient. 
 In these cases, the span should still be annotated with the relevant label, but you should also check the box "NonIdentifying". 
 
-![Brat annotation edit window showing the text "60", with the label "AGES" selected, and the "NonIdentifying" box checked.](media/brat_nonidentifying.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
+![Brat annotation edit window showing the text "911", with the label "TELEPHONE NUMBERS" selected, and the "GenericTemplate" box checked.](media/brat_generictemplate.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 The most common example of this is template text, such as in triage forms. 
 The person conducting the triage runs though a checklist, and the results of that checklist are saved in a note. 
