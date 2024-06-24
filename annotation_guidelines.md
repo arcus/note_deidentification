@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 2.1.0
+version: 3.0.0
 logo: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/20210304191333_IMG_3364-01.jpg/512px-20210304191333_IMG_3364-01.jpg?20210325173111
 language: en
 narrator: UK English Female
@@ -10,10 +10,6 @@ mode: Textbook
 title: Annotation Guidelines
 
 comment:  This is the full description of the ontology used to annotate identifying information in clinical notes for Arcus Projects. 
-
-@version_history 
-No previous versions.
-@end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
