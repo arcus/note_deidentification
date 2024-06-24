@@ -45,7 +45,7 @@ For example, patient name (PATIENT) is one label, and zip code (ZIPCODE) is anot
 Creating an annotation means highlighting a span in the text, and then associating that span with a label. 
 For example, consider the following fake note: "Raul presents with fever that doesn't respond to tylenol as well as cough, congestion, and fatigue." 
 We would create an annotation in this note which would be the span "Raul" and it would get the label "PATIENT".
-You also have the option to add additional information about an annotation, by clicking [Unsure](#unsure) or [NonIndentifying](#nonindentifying) and/or by writing a note in the annotation notes box.
+You also have the option to add additional information about an annotation, by clicking [Unsure](#unsure) or [GenericTemplate](#generictemplate) and/or by writing a note in the annotation notes box.
 
 **HIPAA**: 
 [Health Insurance Portability and Accountability Act](https://www.hhs.gov/hipaa/for-professionals/index.html). 
@@ -79,7 +79,7 @@ It's crucial that we cover all the HIPAA categories, but know that these guideli
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">When in doubt, annotate</b><br>
 
-If you're not sure whether or not a span is identifying, annotate it (and use the [unsure](#unsure) option to flag it for review).
+If you're not sure whether or not a span should be labeled, annotate it (and use the [Unsure](#unsure) option to flag it for review).
 It's always better to over-annotate than under-annotate.
 
 </div>
@@ -167,7 +167,7 @@ PHOTOGRAPHS AND IMAGES
 ```
 
 Each of the labels above is explained in more detail in the sections that follow. 
-You also have the option to add [additional information](#additional-options) to any annotation as needed, in the form of "Unsure" and "NonIdentifying" tags. 
+You also have the option to add [additional information](#additional-options) to any annotation as needed, in the form of "Unsure" and "GenericTemplate" tags. 
 And there's a notes box in the brat annotator, so you can record additional notes about an annotation as needed there. 
 
 ### NAMES
@@ -215,11 +215,11 @@ Examples of DEPARTMENT, with the span bolded:
 - Seen by Dr. Gloria de la Vega, MD, Children's Hospital of Philadelphia **ADHD Management Center**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
 - CHOP **Pediatrics**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
 
-Generic departments -- in other words, departments that you might expect to exist with that same name at most hospitals, like ER, Cardiology, NICU -- should still be labeled, but also be marked as "[NonIdentifying](#nonindentifying)". 
-For example, in the note "Pt came to **ER**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> for persistent fever (4 days), admitted to **PICU**<!-- style="background-color: rgba(var(--color-highlight), .2)"-->" both "ER" and "PICU" would have "NonIdentifying" checked as well, since those are generic names. 
+Generic departments -- in other words, departments that you might expect to exist with that same name at most hospitals, like ER, Cardiology, NICU -- should still be labeled, but also be marked as "[GenericTemplate](#generictemplate)". 
+For example, in the note "Pt came to **ER**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> for persistent fever (4 days), admitted to **PICU**<!-- style="background-color: rgba(var(--color-highlight), .2)"-->" both "ER" and "PICU" would have "GenericTemplate" checked as well, since those are generic names. 
 
 Note that sometimes the same phrase might refer to a department or not depending on context. 
-For example, "she was seen in **dermatology**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" should be labeled DEPARTMENT-Nonidentifying, but "she had a number of dermatology tests" wouldn't be labeled because in that case it refers to the general medical field of dermatology, not the department at this hospital. 
+For example, "she was seen in **dermatology**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" should be labeled DEPARTMENT-GenericTemplate, but "she had a number of dermatology tests" wouldn't be labeled because in that case it refers to the general medical field of dermatology, not the department at this hospital. 
 
 The label ORGANIZATION is for entities other than hospitals or other healthcare facilities.
 The most common examples are employers or schools (of the patient, or relatives, or household members).
@@ -237,8 +237,8 @@ Examples of OTHER IDENTIFYING, with the span bolded:
 - Dear Ms. **Daniali**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, I am writing to follow up on your child's recent appointment at our clinic. 
 - Mom reports that pt's younger sister, **Rae**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, has had similar sx.
 
-When the name is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[NonIdentifying](#nonindentifying)". 
-For example, "Pt loves **Peppa Pig**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, it helps to play that when you need to adjust his dressing" should have the label NAMES on the span "Peppa Pig" but it should also be checked as "NonIdentifying". 
+When the name is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[GenericTemplate](#generictemplate)". 
+For example, "Pt loves **Peppa Pig**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, it helps to play that when you need to adjust his dressing" should have the label NAMES on the span "Peppa Pig" but it should also be checked as "GenericTemplate". 
 
 ### LOCATION
 
@@ -256,8 +256,8 @@ Whenever possible, use the more specific labels:
 
 For location information that can't be described with the more specific labels, just use LOCATION.
 
-When the a location is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[NonIdentifying](#nonindentifying)". 
-For example, "Pt correctly identified **Paris**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> as the capital of **France**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> but failed two other cognitive checks" should have the label LOCATION on the two spans indicated, but each should also be checked as "NonIdentifying". 
+When the a location is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[GenericTemplate](#generictemplate)". 
+For example, "Pt correctly identified **Paris**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> as the capital of **France**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> but failed two other cognitive checks" should have the label LOCATION on the two spans indicated, but each should also be checked as "GenericTemplate". 
 
 ### DATES
 
@@ -303,7 +303,7 @@ When HIPAA-protected ages occur (anything 90 or greater), then instead of using 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Ages under 90</b><br>
 
-Even though we're not explicitly marking ages under 90 as "[NonIdentifying](#nonindentifying)", we have the option to do that systematically after the fact.
+Even though we're not explicitly marking ages under 90 as "[GenericTemplate](#generictemplate)", we have the option to do that systematically after the fact.
 
 </div>
 
@@ -327,9 +327,9 @@ The following do NOT count as age and should not be labeled:
 - school grade level (e.g. 4th grade)
 - age periods (newborn, teenage, middle-age, etc.)
 
-When the an age is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[NonIdentifying](#nonindentifying)". 
+When the an age is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[GenericTemplate](#generictemplate)". 
 This most frequently occurs as a result of template text ("NEGATIVE: Infant **< 12 weeks**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> and temp higher than 100.4"), or when referring to general ages ("Most children have 1-3 words in their productive vocabulary by **15 months**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->").
-These spans should still be labeled as AGES, but they should also have "NonIdentifying" checked. 
+These spans should still be labeled as AGES, but they should also have "GenericTemplate" checked. 
 
 ### MEDICAL RECORD NUMBERS
 
@@ -374,8 +374,8 @@ There are some special phone numbers that follow a different format, but should 
 - Call **911**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> right away if the individual collapses, has a seizure, has trouble breathing, or can’t be awakened.
 - Text HOME to **741741**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> for immediate crisis support.
 
-When the phone number is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "NonIdentifying". 
-In the three examples above, the first should just be labeled as TELEPHONE NUMBERS, and the second and third should be labeled as TELEPHONE NUMBERS and also checked as "NonIdentifying".
+When the phone number is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "GenericTemplate". 
+In the three examples above, the first should just be labeled as TELEPHONE NUMBERS, and the second and third should be labeled as TELEPHONE NUMBERS and also checked as "GenericTemplate".
 
 ### FAX NUMBERS
 
@@ -411,8 +411,8 @@ Examples of emails, with the span bolded:
 - Yuri Sharif, MD **sharify@chop.edu**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
 - Pt reports he has received multiple alarming emails from **medicaid@hotmail.com**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> about his coverage; talked with pt about phishing attempts and encouraged him to reach out to the tech support group at his library for help. 
 
-When the email is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care, then it should also be checked as "NonIdentifying". 
-In the three examples above, the first two should just be labeled as EMAIL, and the third should be labeled as EMAIL and also checked as "NonIdentifying".
+When the email is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care, then it should also be checked as "GenericTemplate". 
+In the three examples above, the first two should just be labeled as EMAIL, and the third should be labeled as EMAIL and also checked as "GenericTemplate".
 
 ### WEB URLS
 
@@ -423,8 +423,8 @@ Examples of URLs, with the span bolded:
 - Pt does hourly online transcription work at **www.rev.com**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
 - As per national guidelines (**www.aap.org/**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->), screening should begin at age 3. 
 
-When the URL is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care, then it should also be checked as "NonIdentifying". 
-In the three examples above, the first two should just be labeled as WEB URLS, and the third should be labeled as WEB URLS and also checked as "NonIdentifying".
+When the URL is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care, then it should also be checked as "GenericTemplate". 
+In the three examples above, the first two should just be labeled as WEB URLS, and the third should be labeled as WEB URLS and also checked as "GenericTemplate".
 
 This category rarely occurs. 
 
@@ -477,14 +477,14 @@ This category rarely occurs.
 For each annotation, you also have the option to add one or more categories in addition to the label. 
 These show up as check boxes under the list of labels in the brat annotator. 
 
-The options are "NonIdentifying" and "Unsure".
+The options are "GenericTemplate" and "Unsure".
 
-![Checkboxes for "NonIdentifying" and "Unsure" show up in the "Entity attributes" section of the brat annotation edit window, beneath the ontology labels.](media/brat_attributes.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
+![Checkboxes for "GenericTemplate" and "Unsure" show up in the "Entity attributes" section of the brat annotation edit window, beneath the ontology labels.](media/brat_attributes.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
 
-### NonIndentifying
+### GenericTemplate
 
 Sometimes notes contain spans that do match the ontology categories, but are completely unrelated to the patient. 
-In these cases, the span should still be annotated with the relevant label, but you should also check the box "NonIdentifying". 
+In these cases, the span should still be annotated with the relevant label, but you should also check the box "GenericTemplate". 
 
 ![Brat annotation edit window showing the text "911", with the label "TELEPHONE NUMBERS" selected, and the "GenericTemplate" box checked.](media/brat_generictemplate.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
 
@@ -494,11 +494,11 @@ Items on the checklist might be things like "Fever in infant **< 12 weeks**<!-- 
 The span "< 12 weeks" is an age, but it's not about the patient at all, it's just a generic cutoff. 
 
 Another example occurs in references to general guidelines or standards. 
-For example, the note "Recommended catch up schedule (**www.cdc.gov/vaccines/schedules/hcp/imz/catchup.html**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->) for missed vaccines" includes a URL, so it should be annotated with the label WEB URLS, but it should also be checked as "NonIdentifying" since that URL is not identifying the patient, it's just a reference. 
+For example, the note "Recommended catch up schedule (**www.cdc.gov/vaccines/schedules/hcp/imz/catchup.html**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->) for missed vaccines" includes a URL, so it should be annotated with the label WEB URLS, but it should also be checked as "GenericTemplate" since that URL is not about the patient, it's just a generic reference. 
 It doesn't provide information about who the patient is (or their relatives, employer, or household members) or any information about where they received care. 
 
-The note "**AAP**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> recommends ASD screening for children with no productive language at **18m**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" would have two spans that should be checked "NonIdentifying": 
-"AAP" (the American Academy of Pediatrics) should get the label ORGANIZATION, and "18m" should get AGES, and both would be checked "NonIdentifying". 
+The note "**AAP**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> recommends ASD screening for children with no productive language at **18m**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" would have two spans that should be checked "GenericTemplate": 
+"AAP" (the American Academy of Pediatrics) should get the label ORGANIZATION, and "18m" should get AGES, and both would be checked "GenericTemplate". 
 (Note that "ASD" is an abbreviation for Autism Spectrum Disorder and should not be annotated.)
 
 ### Unsure
