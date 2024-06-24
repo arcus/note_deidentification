@@ -279,6 +279,22 @@ Here are examples of date components occurring in isolation, with the spans bold
 - First noticed rash in **March**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> 
 - Attempted corrective surgery in **1999**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> and again in **2003**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Why do we label partial dates?</b><br>
+
+HIPAA protects some pieces of date information and allows others. 
+According to the [safe harbour guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#safeharborguidance), the following date information needs to be removed for notes to be deidentified: 
+
+> All elements of dates (except year) for dates that are directly related to an individual, including birth date, admission date, discharge date, death date...
+
+But when notes are used in research, they are usually provided as part of a larger data set, which may include additional information allowable under the safe harbor deidentification method. 
+That means a deidentified dataset may include a field giving the year of an encounter.
+If deidentified notes are added to that dataset and those notes include, for example, the fact that an encounter happened in "January", then even though neither the year on its own nor the month on its own would violate HIPAA, the fact that they're both available is a violation.
+
+Labeling date components even when they wouldn't be PII on their own helps us ensure that protected date information doesn't become available in combination with other fields. 
+
+</div>
+
 When the date information is not formatted as a typical date, but it is more specific than a year (e.g. "Thanksgiving", "winter", "Ramadan", "flu season"), use the label "OTHER IDENTIFYING (Ex. Holiday Names)".
 This may also include notable events that were less than a year ("Pearl Harbor", "2008 Market Crash").
 Here are examples of OTHER IDENTIFYING (Ex. Holiday Names), with the spans bolded:
@@ -303,7 +319,9 @@ When HIPAA-protected ages occur (anything 90 or greater), then instead of using 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Ages under 90</b><br>
 
-Even though we're not explicitly marking ages under 90 as "[GenericTemplate](#generictemplate)", we have the option to do that systematically after the fact.
+Just because we're labeling all ages doesn't mean we will necessarily have to remove/replace them all when deidentifying the notes. 
+
+We need to remove/replace everything labeled AGE-90PLUS to meet the HIPAA requirements, but we'll have the option to systematically check and either preserve or remove/replace other ages from the annotation files after the fact.
 
 </div>
 
@@ -483,7 +501,7 @@ The options are "GenericTemplate" and "Unsure".
 
 ### GenericTemplate
 
-Sometimes notes contain spans that do match the ontology categories, but are completely unrelated to the patient. 
+Sometimes notes contain spans that do match the ontology categories, but are completely unrelated to the patient, such as generic references or text from templates. 
 In these cases, the span should still be annotated with the relevant label, but you should also check the box "GenericTemplate". 
 
 ![Brat annotation edit window showing the text "911", with the label "TELEPHONE NUMBERS" selected, and the "GenericTemplate" box checked.](media/brat_generictemplate.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
