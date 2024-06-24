@@ -531,6 +531,19 @@ This will flag it in the data, and it can be included in regular review and disc
 Don't over-use the Unsure option -- if you find you frequently feel like you are unsure of your annotations, that suggests there's a problem with the ontology, the coding training, or both. 
 Please bring that to the attention of the rest of the research team, and thank you for contributing to the improvement of the coding process! 
 
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Unsure labels and assessing reliability</b><br>
+
+Note that the Unsure option is the only part of the ontology that is not taken into account during reliability checks. 
+
+There is no "right" time to use or not use the Unsure option.
+During training and the reliability check, if you label a span, it will be compared to the gold standard annotations regardless of whether or not you checked Unsure.
+
+Think of it as a communication tool for the team rather than as part of the data.
+It's intended as a way to flag tricky annotations in the moment for later review. 
+
+</div>
+
 ## References
 
 https://lhncbc.nlm.nih.gov/scrubber/annotation/pdf.papers/Guidelines.2016.06.28.pdf
