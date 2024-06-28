@@ -12,6 +12,8 @@ title: Annotation Guidelines
 comment:  This is the full description of the ontology used to annotate identifying information in clinical notes for Arcus Projects. 
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+
+@highlight: <b style="background-color: rgba(var(--color-highlight), .2)">@0</b>
 -->
 
 # Annotation Guidelines
@@ -186,21 +188,21 @@ Whenever possible, use the more specific labels:
 
 Examples of PATIENT, with the span bolded:
 
-- 4yo boy **Henry**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> came in complaining of headache
-- Patient: **D. Ramos**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Name **Matthew Shapiro III**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Working with **HB**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> on her coordination, strength, and balance. 
+- 4yo boy @highlight(Henry) came in complaining of headache
+- Patient: @highlight(D. Ramos)
+- Name @highlight(Matthew Shapiro III)
+- Working with @highlight(HB) on her coordination, strength, and balance. 
 
 Examples of STAFF, with the span bolded:
 
-- Seen by Dr. **Gloria de la Vega**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, MD, Children's Hospital of Philadelphia ADHD Management Center
-- Vitals Q4, checked by **MJ**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> at 8:03pm
+- Seen by Dr. @highlight(Gloria de la Vega), MD, Children's Hospital of Philadelphia ADHD Management Center
+- Vitals Q4, checked by @highlight(MJ) at 8:03pm
 
 Examples of HOSPITAL, with the span bolded:
 
-- Seen by Dr. Gloria de la Vega, MD, **Children's Hospital of Philadelphia**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> ADHD Management Center
-- **CHOP**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> Pediatrics
-- Pt got treatment at **Cincinnati**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> before coming here, see transfer notes.
+- Seen by Dr. Gloria de la Vega, MD, @highlight(Children's Hospital of Philadelphia) ADHD Management Center
+- @highlight(CHOP) Pediatrics
+- Pt got treatment at @highlight(Cincinnati) before coming here, see transfer notes.
 
 (Context matters -- in this example "Cincinnati" refers to the hospital "Cincinnati Children's Hospital", not the city. 
 In a note saying "Pt lives in Cincinnati", it would instead be labeled as CITY.)
@@ -208,33 +210,33 @@ In a note saying "Pt lives in Cincinnati", it would instead be labeled as CITY.)
 A DEPARTMENT is any sub-unit within a hospital, including programs, services, and centers. 
 Examples of DEPARTMENT, with the span bolded:
 
-- Seen by Dr. Gloria de la Vega, MD, Children's Hospital of Philadelphia **ADHD Management Center**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- CHOP **Pediatrics**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- Seen by Dr. Gloria de la Vega, MD, Children's Hospital of Philadelphia @highlight(ADHD Management Center)
+- CHOP @highlight(Pediatrics)
 
 Generic departments -- in other words, departments that you might expect to exist with that same name at most hospitals, like ER, Cardiology, NICU -- should still be labeled, but also be marked as "[GenericTemplate](#generictemplate)". 
-For example, in the note "Pt came to **ER**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> for persistent fever (4 days), admitted to **PICU**<!-- style="background-color: rgba(var(--color-highlight), .2)"-->" both "ER" and "PICU" would have "GenericTemplate" checked as well, since those are generic names. 
+For example, in the note "Pt came to @highlight(ER) for persistent fever (4 days), admitted to @highlight(PICU)" both "ER" and "PICU" would have "GenericTemplate" checked as well, since those are generic names. 
 
 Note that sometimes the same phrase might refer to a department or not depending on context. 
-For example, "she was seen in **dermatology**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" should be labeled DEPARTMENT-GenericTemplate, but "she had a number of dermatology tests" wouldn't be labeled because in that case it refers to the general medical field of dermatology, not the department at this hospital. 
+For example, "she was seen in @highlight(dermatology)" should be labeled DEPARTMENT-GenericTemplate, but "she had a number of dermatology tests" wouldn't be labeled because in that case it refers to the general medical field of dermatology, not the department at this hospital. 
 
 The label ORGANIZATION is for entities other than hospitals or other healthcare facilities.
 The most common examples are employers or schools (of the patient, or relatives, or household members).
 Examples of ORGANIZATION, with the span bolded:
 
-- Pt was in the **army**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Patient's mom works at **Costco**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Is enrolled at **Brook Elementary**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Receives services through **Step Up Philly**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- Pt was in the @highlight(army)
+- Patient's mom works at @highlight(Costco)
+- Is enrolled at @highlight(Brook Elementary)
+- Receives services through @highlight(Step Up Philly)
 
 The label OTHER IDENTIFYING is for people connected with the patient (other than healthcare workers, who should be labeled as STAFF), for example, names of family members, friends, neighbors, supervisors or coworkers, etc.
 Examples of OTHER IDENTIFYING, with the span bolded:
 
-- Pt was brought in by neighbor, **Zahir**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, who found him collapsed in backyard.
-- Dear Ms. **Daniali**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, I am writing to follow up on your child's recent appointment at our clinic. 
-- Mom reports that pt's younger sister, **Rae**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, has had similar sx.
+- Pt was brought in by neighbor, @highlight(Zahir), who found him collapsed in backyard.
+- Dear Mr. @highlight(Daniali), I am writing to follow up on your child's recent appointment at our clinic. 
+- Mom reports that pt's younger sister, @highlight(Rae), has had similar sx.
 
 When the name is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[GenericTemplate](#generictemplate)". 
-For example, "Pt loves **Peppa Pig**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, it helps to play that when you need to adjust his dressing" should have the label NAMES on the span "Peppa Pig" but it should also be checked as "GenericTemplate". 
+For example, "Pt loves @highlight(Peppa Pig), it helps to play that when you need to adjust his dressing" should have the label NAMES on the span "Peppa Pig" but it should also be checked as "GenericTemplate". 
 
 ### LOCATION
 
@@ -253,7 +255,7 @@ Whenever possible, use the more specific labels:
 For location information that can't be described with the more specific labels, just use LOCATION.
 
 When the a location is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[GenericTemplate](#generictemplate)". 
-For example, "Pt correctly identified **Paris**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> as the capital of **France**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> but failed two other cognitive checks" should have the label LOCATION on the two spans indicated, but each should also be checked as "GenericTemplate". 
+For example, "Pt correctly identified @highlight(Paris) as the capital of @highlight(France) but failed two other cognitive checks" should have the label LOCATION on the two spans indicated, but each should also be checked as "GenericTemplate". 
 
 ### DATES
 
@@ -262,18 +264,18 @@ When the date is in a recognizable format -- either just digits, like "11-3-23",
 This includes things like date of birth or admission date, but also things like report date, appointment date, and dates from lab samples or test results. 
 Examples of DATES, with the spans bolded:
 
-- Patient DOB: **2/4/20**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Pt was born **May 3**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, admitted **May 10**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->. 
-- Immunized TDAP **5/3**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Well child appts **1999-04-03**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, **2000-04-10**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, **2001-04-23**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Next session **November 4, 2023**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- Patient DOB: @highlight(2/4/20)
+- Pt was born @highlight(May 3), admitted @highlight(May 10). 
+- Immunized TDAP @highlight(5/3)
+- Well child appts @highlight(1999-04-03), @highlight(2000-04-10), @highlight(2001-04-23)
+- Next session @highlight(November 4, 2023)
 
 When date components (day, month, year) occur in isolation, instead of labeling them with DATES, label them with MONTH, DAY, or YEAR. 
 Here are examples of date components occurring in isolation, with the spans bolded: 
 
-- Sessions scheduled for the **14**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->, **15**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> and **16th**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> of next month
-- First noticed rash in **March**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> 
-- Attempted corrective surgery in **1999**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> and again in **2003**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- Sessions scheduled for the @highlight(14), @highlight(15) and @highlight(16th) of next month
+- First noticed rash in @highlight(March) 
+- Attempted corrective surgery in @highlight(1999) and again in @highlight(2003)
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Why do we label partial dates?</b><br>
@@ -295,9 +297,9 @@ When the date information is not formatted as a typical date, but it is more spe
 This may also include notable events that were less than a year ("Pearl Harbor", "2008 Market Crash").
 Here are examples of OTHER IDENTIFYING (Ex. Holiday Names), with the spans bolded:
 
-- Sx started about 3 weeks ago, dad remembers noticing congestion during **spring break**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Pt was injured in **Hurricane Sandy**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Was hospitalized **Christmas Eve 2021**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- Sx started about 3 weeks ago, dad remembers noticing congestion during @highlight(spring break)
+- Pt was injured in @highlight(Hurricane Sandy)
+- Was hospitalized @highlight(Christmas Eve 2021)
 
 The following do NOT count as DATES and should not be labeled:
 
@@ -325,15 +327,15 @@ When age is listed with units (like year/month/week/day), the span should includ
 For ranges (for example, "15-18mos"), the span is the whole range, including both numbers and the hyphen (and units, if applicable).
 Examples of age, with the span bolded: 
 
-- **4y**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->o boy presents with abdominal pain
-- Patient's mother was adv age at his birth (**46**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->).
-- Pt is **2 years 3/12 months**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> old
-- when she was approximately **24 years**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> old
-- At **24 months**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> patient underwent chemo
-- pt diagnosed at **day six**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> of life
-- Dad reports that at **9w**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> patient fell off changing table and hit her head, but no signs of tbi
-- Enrolled in the program from **4-8y**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Mammograms recommended at age **40**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- @highlight(4y)o boy presents with abdominal pain
+- Patient's mother was adv age at his birth (@highlight(46)).
+- Pt is @highlight(2 years 3/12 months) old
+- when she was approximately @highlight(24 years) old
+- At @highlight(24 months) patient underwent chemo
+- pt diagnosed at @highlight(day six) of life
+- Dad reports that at @highlight(9w) patient fell off changing table and hit her head, but no signs of tbi
+- Enrolled in the program from @highlight(4-8y)
+- Mammograms recommended at age @highlight(40)
 
 The following do NOT count as age and should not be labeled:
 
@@ -342,7 +344,7 @@ The following do NOT count as age and should not be labeled:
 - age periods (newborn, teenage, middle-age, etc.)
 
 When the an age is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[GenericTemplate](#generictemplate)". 
-This most frequently occurs as a result of template text ("NEGATIVE: Infant **< 12 weeks**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> and temp higher than 100.4"), or when referring to general ages ("Most children have 1-3 words in their productive vocabulary by **15 months**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->").
+This most frequently occurs as a result of template text ("NEGATIVE: Infant @highlight(< 12 weeks) and temp higher than 100.4"), or when referring to general ages ("Most children have 1-3 words in their productive vocabulary by @highlight(15 months)").
 These spans should still be labeled as AGES, but they should also have "GenericTemplate" checked. 
 
 ### MEDICAL RECORD NUMBERS
@@ -360,13 +362,13 @@ Whenever possible, use the more specific labels:
 
 Examples of ID, with the span bolded:
 
-- Clinical trial ID: **GH09-334**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Abbott Elementary, Student ID **123999**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- Clinical trial ID: @highlight(GH09-334)
+- Abbott Elementary, Student ID @highlight(123999)
 
 Examples of USERNAMES, with the span bolded:
 
-- Patient is active on social media (**@cool_patient**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->) and does most of his socializing through those platforms
-- Note entered via MyChart, user **gsmith3**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
+- Patient is active on social media (@highlight(@cool_patient)) and does most of his socializing through those platforms
+- Note entered via MyChart, user @highlight(gsmith3)
 
 Also use this label for any "identifying characteristic" that isn't captured in the rest of the ontology. 
 In that case, just use the label OTHER MISC. 
@@ -374,8 +376,8 @@ Examples of other identifying characteristics could be anything that doesn't fal
 For more detail, see [What constitutes “any other unique identifying number, characteristic, or code” with respect to the Safe Harbor method of the Privacy Rule?](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#uniquenumber)
 Examples of OTHER MISC, with the span bolded: 
 
-- Pt complains of BL wrist stiffness and pain. She is an **Olympic swimmer (won two gold and two silver medals in the 2016 games!)**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->. Work closely with both patient and coach to develop a treatment plan that takes her training into account. 
-- His aunt is the **first recipient of the Nobel Peace Prize**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> in this decade.
+- Pt complains of BL wrist stiffness and pain. She is an @highlight(`Olympic swimmer (won two gold and two silver medals in the 2016 games!)`). Work closely with both patient and coach to develop a treatment plan that takes her training into account. 
+- His aunt is the @highlight(first recipient of the Nobel Peace Prize) in this decade.
 
 ### TELEPHONE NUMBERS
 
@@ -384,9 +386,9 @@ These are usually 7 or 10 digits (depending on whether or not the area code is p
 
 There are some special phone numbers that follow a different format, but should still be labeled as telephone numbers. For example: 
 
-- For assistance, dial **4-CHOP**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Call **911**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> right away if the individual collapses, has a seizure, has trouble breathing, or can’t be awakened.
-- Text HOME to **741741**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> for immediate crisis support.
+- For assistance, dial @highlight(4-CHOP)
+- Call @highlight(911) right away if the individual collapses, has a seizure, has trouble breathing, or can’t be awakened.
+- Text HOME to @highlight(741741) for immediate crisis support.
 
 When the phone number is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "GenericTemplate". 
 In the three examples above, the first should just be labeled as TELEPHONE NUMBERS, and the second and third should be labeled as TELEPHONE NUMBERS and also checked as "GenericTemplate".
@@ -412,7 +414,7 @@ Annotate every instance of a health plan beneficiary number.
 ### SOCIAL SECURITY NUMBERS
 
 Annotate every instance of a social security number (SSN). 
-These are generally nine digits, separated into a group of three, then two, then four by hyphens or spaces (for example, **123-45-6789**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->).
+These are generally nine digits, separated into a group of three, then two, then four by hyphens or spaces (for example, @highlight(123-45-6789)).
 
 Note that partial SSNs (such as just the last four digits) should also be labeled. 
 
@@ -421,9 +423,9 @@ Note that partial SSNs (such as just the last four digits) should also be labele
 Annotate every instance of an email address. 
 Examples of emails, with the span bolded: 
 
-- Pt asked us to also send results to her at **cool_patient@gmail.com**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Yuri Sharif, MD **sharify@chop.edu**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Pt reports he has received multiple alarming emails from **medicaid@hotmail.com**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> about his coverage; talked with pt about phishing attempts and encouraged him to reach out to the tech support group at his library for help. 
+- Pt asked us to also send results to her at @highlight(cool_patient@gmail.com)
+- Yuri Sharif, MD @highlight(sharify@chop.edu)
+- Pt reports he has received multiple alarming emails from @highlight(medicaid@hotmail.com) about his coverage; talked with pt about phishing attempts and encouraged him to reach out to the tech support group at his library for help. 
 
 When the email is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care, then it should also be checked as "GenericTemplate". 
 In the three examples above, the first two should just be labeled as EMAIL, and the third should be labeled as EMAIL and also checked as "GenericTemplate".
@@ -433,9 +435,9 @@ In the three examples above, the first two should just be labeled as EMAIL, and 
 Annotate every instance of a web address. 
 Examples of URLs, with the span bolded:
 
-- Instructed patient to review resources on our website **www.chop.edu/centers-programs/center-management-adhd**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- Pt does hourly online transcription work at **www.rev.com**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->
-- As per national guidelines (**www.aap.org/**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->), screening should begin at age 3. 
+- Instructed patient to review resources on our website @highlight(www.chop.edu/centers-programs/center-management-adhd)
+- Pt does hourly online transcription work at @highlight(www.rev.com)
+- As per national guidelines (@highlight(www.aap.org/)), screening should begin at age 3. 
 
 When the URL is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care, then it should also be checked as "GenericTemplate". 
 In the three examples above, the first two should just be labeled as WEB URLS, and the third should be labeled as WEB URLS and also checked as "GenericTemplate".
@@ -449,7 +451,7 @@ Note that this does NOT include model or brand of a device -- only something tha
 
 And example of a device identifier would be something like the following: 
 
-- Pt is enrolled in the CDD trial and has a pacemaker (**ID-32443**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->)
+- Pt is enrolled in the CDD trial and has a pacemaker (@highlight(ID-32443))
 
 The following would NOT count as a device identifier or serial number and should NOT be labelled: 
 
@@ -468,7 +470,7 @@ This category rarely occurs.
 ### IP ADDRESSES
 
 Annotate any IP address. 
-They are generally four numbers (from 0-255) separated by periods, like "**163.116.80.111**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->".
+They are generally four numbers (from 0-255) separated by periods, like "@highlight(163.116.80.111)".
 
 This category rarely occurs. 
 
@@ -504,14 +506,14 @@ In these cases, the span should still be annotated with the relevant label, but 
 
 The most common example of this is template text, such as in triage forms. 
 The person conducting the triage runs though a checklist, and the results of that checklist are saved in a note. 
-Items on the checklist might be things like "Fever in infant **< 12 weeks**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->".
+Items on the checklist might be things like "Fever in infant @highlight(< 12 weeks)".
 The span "< 12 weeks" is an age, but it's not about the patient at all, it's just a generic cutoff. 
 
 Another example occurs in references to general guidelines or standards. 
-For example, the note "Recommended catch up schedule (**www.cdc.gov/vaccines/schedules/hcp/imz/catchup.html**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->) for missed vaccines" includes a URL, so it should be annotated with the label WEB URLS, but it should also be checked as "GenericTemplate" since that URL is not about the patient, it's just a generic reference. 
+For example, the note "Recommended catch up schedule (@highlight(www.cdc.gov/vaccines/schedules/hcp/imz/catchup.html)) for missed vaccines" includes a URL, so it should be annotated with the label WEB URLS, but it should also be checked as "GenericTemplate" since that URL is not about the patient, it's just a generic reference. 
 It doesn't provide information about who the patient is (or their relatives, employer, or household members) or any information about where they received care. 
 
-The note "**AAP**<!-- style="background-color: rgba(var(--color-highlight), .2)" --> recommends ASD screening for children with no productive language at **18m**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" would have two spans that should be checked "GenericTemplate": 
+The note "@highlight(AAP) recommends ASD screening for children with no productive language at @highlight(18m)" would have two spans that should be checked "GenericTemplate": 
 "AAP" (the American Academy of Pediatrics) should get the label ORGANIZATION, and "18m" should get AGES, and both would be checked "GenericTemplate". 
 (Note that "ASD" is an abbreviation for Autism Spectrum Disorder and should not be annotated.)
 
@@ -545,8 +547,9 @@ It's intended as a way to flag tricky annotations in the moment for later review
 School District of Philadelphia
 ---
 
-Should "School District of Philadelphia" be annotated as "School District of **Philadelphia**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->"-CITY or "**School District of Philadelphia**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->"-ORGANIZATION?
-It could reasonably be labeled either way, but "School District of **Philadelphia**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->"-CITY is preferable because it will result in more useful notes after the PII has been removed/replaced. 
+Should "School District of Philadelphia" be annotated as "School District of @highlight(Philadelphia)"-CITY or "@highlight(School District of Philadelphia)"-ORGANIZATION?
+
+It could reasonably be labeled either way, but "School District of @highlight(Philadelphia)"-CITY is preferable because it will result in more useful notes after the PII has been removed/replaced. 
 "School District of [some city]" is a common naming convention used across the country; substituting in a made-up city would effectively remove the identifying information from the span (no one would be able to work out the patient's actual location from something like "School District of Cityname").
 And substituting the whole span "School District of Philadelphia" with a dummy organization name would be much less likely to result in a coherent deidentified note.
 
@@ -562,7 +565,7 @@ Although the HIPAA safe harbor method allows deidentified notes to include geogr
 That means that any span that indicates the (probable) state a patient lives in or received care in should be removed/replaced. 
 Because state requirements/procedures/guidelines are very unlikely to be referenced in a note unless the patient lives or receives care in that state, state information will **almost never** be marked GenericTemplate. 
 
-For example, a note referencing the "Pennsylvania newborn screening" should be annotated as "**Pennsylvania**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->-STATE newborn screening" and would not be marked GenericTemplate.
+For example, a note referencing the "Pennsylvania newborn screening" should be annotated as "@highlight(Pennsylvania)-STATE newborn screening" and would not be marked GenericTemplate.
 
 ## References
 
