@@ -1,4 +1,4 @@
-# Note Deidentifcation 
+# Note Deidentification 
 
 Training documentation and guidelines for de-identification of clinical notes.
 
