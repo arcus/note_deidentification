@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 3.0.0
+version: 3.1.0
 logo: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/20210304191333_IMG_3364-01.jpg/512px-20210304191333_IMG_3364-01.jpg?20210325173111
 language: en
 narrator: UK English Female
@@ -539,6 +539,30 @@ Think of it as a communication tool for the team rather than as part of the data
 It's intended as a way to flag tricky annotations in the moment for later review. 
 
 </div>
+
+## FAQ
+
+School District of Philadelphia
+---
+
+Should "School District of Philadelphia" be annotated as "School District of **Philadelphia**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->"-CITY or "**School District of Philadelphia**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->"-ORGANIZATION?
+It could reasonably be labeled either way, but "School District of **Philadelphia**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->"-CITY is preferable because it will result in more useful notes after the PII has been removed/replaced. 
+"School District of [some city]" is a common naming convention used across the country; substituting in a made-up city would effectively remove the identifying information from the span (no one would be able to work out the patient's actual location from something like "School District of Cityname").
+And substituting the whole span "School District of Philadelphia" with a dummy organization name would be much less likely to result in a coherent deidentified note.
+
+Note that this is in contrast to a span like "The Children's Hospital of Philadelphia," which should be annotated with the entire span as HOSPITAL. 
+Unlike "School District of", "Children's Hospital of" is not a naming convention common to most cities; many cities have no dedicated children's hospital at all, and many of those who do use a different name structure. 
+A span like "The Children's Hospital of Cityname" is much more likely to be identifying than "School District of Cityname".
+
+When should STATE be marked GenericTemplate?
+---
+
+Generic references and guidelines often include state-level information. 
+Although the HIPAA safe harbor method allows deidentified notes to include geographic information at the state level, we're taking a more conservative approach and removing state. 
+That means that any span that indicates the (probable) state a patient lives in or received care in should be removed/replaced. 
+Because state requirements/procedures/guidelines are very unlikely to be referenced in a note unless the patient lives or receives care in that state, state information will **almost never** be marked GenericTemplate. 
+
+For example, a note referencing the "Pennsylvania newborn screening" should be annotated as "**Pennsylvania**-STATE newborn screening<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" and would not be marked GenericTemplate.
 
 ## References
 
