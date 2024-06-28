@@ -562,7 +562,7 @@ Although the HIPAA safe harbor method allows deidentified notes to include geogr
 That means that any span that indicates the (probable) state a patient lives in or received care in should be removed/replaced. 
 Because state requirements/procedures/guidelines are very unlikely to be referenced in a note unless the patient lives or receives care in that state, state information will **almost never** be marked GenericTemplate. 
 
-For example, a note referencing the "Pennsylvania newborn screening" should be annotated as "**Pennsylvania**-STATE newborn screening<!-- style="background-color: rgba(var(--color-highlight), .2)" -->" and would not be marked GenericTemplate.
+For example, a note referencing the "Pennsylvania newborn screening" should be annotated as "**Pennsylvania**<!-- style="background-color: rgba(var(--color-highlight), .2)" -->-STATE newborn screening" and would not be marked GenericTemplate.
 
 ## References
 
