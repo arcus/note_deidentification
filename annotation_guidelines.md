@@ -207,11 +207,13 @@ Examples of HOSPITAL, with the span bolded:
 (Context matters -- in this example "Cincinnati" refers to the hospital "Cincinnati Children's Hospital", not the city. 
 In a note saying "Pt lives in Cincinnati", it would instead be labeled as CITY.)
 
-A DEPARTMENT is any sub-unit within a hospital, including programs, services, and centers. 
+A DEPARTMENT is any sub-unit within a hospital, including programs, divisions, services, and centers. 
+When a DEPARTMENT name includes words like "department," "office," "center," or "division", that should be included in the span.
 Examples of DEPARTMENT, with the span bolded:
 
 - Seen by Dr. Gloria de la Vega, MD, Children's Hospital of Philadelphia @highlight(ADHD Management Center)
 - CHOP @highlight(Pediatrics)
+- Manuel Rosado, MD, PhD, Director of the @highlight(Cardiac Health Center), @highlight(Division of Cardiothoracic Surgery)
 
 Generic departments -- in other words, departments that you might expect to exist with that same name at most hospitals, like ER, Cardiology, NICU -- should still be labeled, but also be marked as "[GenericTemplate](#generictemplate)". 
 For example, in the note "Pt came to @highlight(ER) for persistent fever (4 days), admitted to @highlight(PICU)" both "ER" and "PICU" would have "GenericTemplate" checked as well, since those are generic names. 
@@ -251,6 +253,14 @@ Whenever possible, use the more specific labels:
 - ZIPCODE
 - STATE
 - COUNTRY
+
+For example, "3401 Civic Center Blvd, Philadelphia, PA 19104" would include four annotations for location: "@highlight(3401 Civic Center Blvd)"-STREET, "@highlight(Philadelphia)"-CITY,  "@highlight(PA)"-STATE, and "@highlight(19104)"-ZIPCODE.
+
+When STREET includes something like a unit or apartment number, that should be included, for example: "@highlight(123 N. Main St. #4)"
+
+Occasionally, you may need to use [fragments](#using-fragments) to capture a span if it's not possible to select the whole span with a single section in brat. 
+This is most common for STREET, where a unit number may be on a new line, or form text may interrupt a STREET span. 
+For example, the text "Address 1: @highlight(123 N. Main St.) Address 2: @highlight(#4)" should be annotated as one annotation, with "#4" added as an additional fragment to the first span.
 
 For location information that can't be described with the more specific labels, just use LOCATION.
 
@@ -542,7 +552,31 @@ It's intended as a way to flag tricky annotations in the moment for later review
 
 </div>
 
+## Using Fragments
+
+Occasionally, it may not be possible to highlight an annotation as one continuous unit. 
+In that case, you should use the "Add Frag." button in brat to add a second (or more) span to the original annotation.
+
+!["Edit Annotation" box in brat, with a span labeled STREET. The first button in the row along the bottom is "Add Frag."](media/brat_add_frag.png)
+
 ## FAQ
+
+Should it be one annotation, or several?
+---
+
+Some times relevant information occurs across multiple words, or even multiple lines. 
+When deciding whether to select one span or several, think about what  substituted text for that category might be. 
+For example, in the note "Drs. Metha, Collins, and Rivera were in attendance" if you were to annotate that as a single span like "Drs. @highlight(Metha, Collins, and Rivera)"-STAFF, then resulting replacement text could be something like "Drs. Staffname were in attendance", which is less coherent than if each name were labeled individually: "Drs. @highlight(Metha), @highlight(Collins), and @highlight(Rivera)".
+
+Some tricky examples of things to NOT annotate
+---
+
+Timestamps may look like ID numbers. 
+When you see four digits (with or without a colon) after a date, that's often a timestamp.
+For example: "01/23/2019 1611" means "4:11pm on Jan 23rd, 2019"
+
+Diagnosis codes may look like ID numbers. 
+For example, in the note "Patient Problem list: Food allergy 693.1", "693.1" is the diagnosis code for a particular kind of food allergy (specifically, it's a diagnosis code from the [ICD-9](https://en.wikipedia.org/wiki/International_Classification_of_Diseases) classification system).
 
 School District of Philadelphia
 ---
