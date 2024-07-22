@@ -278,7 +278,7 @@ Examples of DATES, with the spans bolded:
 - Pt was born @highlight(May 3), admitted @highlight(May 10). 
 - Immunized TDAP @highlight(5/3)
 - Well child appts @highlight(1999-04-03), @highlight(2000-04-10), @highlight(2001-04-23)
-- Next session @highlight(November 4, 2023)
+- Next session @highlight(`November 4, 2023`)
 
 When date components (day, month, year) occur in isolation, instead of labeling them with DATES, label them with MONTH, DAY, or YEAR. 
 Here are examples of date components occurring in isolation, with the spans bolded: 
@@ -516,8 +516,8 @@ In these cases, the span should still be annotated with the relevant label, but 
 
 The most common example of this is template text, such as in triage forms. 
 The person conducting the triage runs though a checklist, and the results of that checklist are saved in a note. 
-Items on the checklist might be things like "Fever in infant @highlight(< 12 weeks)".
-The span "< 12 weeks" is an age, but it's not about the patient at all, it's just a generic cutoff. 
+Items on the checklist might be things like "Fever in infant < @highlight(12 weeks)".
+The span "12 weeks" is an age, but it's not about the patient at all, it's just a generic cutoff. 
 
 Another example occurs in references to general guidelines or standards. 
 For example, the note "Recommended catch up schedule (@highlight(www.cdc.gov/vaccines/schedules/hcp/imz/catchup.html)) for missed vaccines" includes a URL, so it should be annotated with the label WEB URLS, but it should also be checked as "GenericTemplate" since that URL is not about the patient, it's just a generic reference. 
@@ -566,7 +566,7 @@ Should it be one annotation, or several?
 
 Some times relevant information occurs across multiple words, or even multiple lines. 
 When deciding whether to select one span or several, think about what  substituted text for that category might be. 
-For example, in the note "Drs. Metha, Collins, and Rivera were in attendance" if you were to annotate that as a single span like "Drs. @highlight(Metha, Collins, and Rivera)"-STAFF, then resulting replacement text could be something like "Drs. Staffname were in attendance", which is less coherent than if each name were labeled individually: "Drs. @highlight(Metha), @highlight(Collins), and @highlight(Rivera)".
+For example, in the note "Drs. Metha, Collins, and Rivera were in attendance" if you were to annotate that as a single span like "Drs. @highlight(`Metha, Collins, and Rivera`)"-STAFF, then resulting replacement text could be something like "Drs. Staffname were in attendance", which is less coherent than if each name were labeled individually: "Drs. @highlight(Metha), @highlight(Collins), and @highlight(Rivera)".
 
 Some tricky examples of things to NOT annotate
 ---
