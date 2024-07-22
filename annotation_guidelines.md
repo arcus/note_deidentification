@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 4.1.1
+version: 4.2.0
 logo: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/20210304191333_IMG_3364-01.jpg/512px-20210304191333_IMG_3364-01.jpg?20210325173111
 language: en
 narrator: UK English Female
@@ -335,6 +335,7 @@ We need to remove/replace everything labeled AGE-90PLUS to meet the HIPAA requir
 
 When age is listed with units (like year/month/week/day), the span should include the number and units, but not the word "old". 
 For ranges (for example, "15-18mos"), the span is the whole range, including both numbers and the hyphen (and units, if applicable).
+When age is expressed as an inequality (for example, "< 1 year" or "under a year") the span is just the age itself, not the "less than".
 Examples of age, with the span bolded: 
 
 - @highlight(4y)o boy presents with abdominal pain
@@ -354,7 +355,7 @@ The following do NOT count as age and should not be labeled:
 - age periods (newborn, teenage, middle-age, etc.)
 
 When the an age is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care (including past, present, or future care), then it should also be checked as "[GenericTemplate](#generictemplate)". 
-This most frequently occurs as a result of template text ("NEGATIVE: Infant @highlight(< 12 weeks) and temp higher than 100.4"), or when referring to general ages ("Most children have 1-3 words in their productive vocabulary by @highlight(15 months)").
+This most frequently occurs as a result of template text ("NEGATIVE: Infant < @highlight(12 weeks) and temp higher than 100.4"), or when referring to general ages ("Most children have 1-3 words in their productive vocabulary by @highlight(15 months)").
 These spans should still be labeled as AGES, but they should also have "GenericTemplate" checked. 
 
 ### MEDICAL RECORD NUMBERS
