@@ -434,9 +434,9 @@ Note that partial SSNs (such as just the last four digits) should also be labele
 Annotate every instance of an email address. 
 Examples of emails, with the span bolded: 
 
-- Pt asked us to also send results to her at @highlight(cool_patient@gmail.com)
-- Yuri Sharif, MD @highlight(sharify@chop.edu)
-- Pt reports he has received multiple alarming emails from @highlight(medicaid@hotmail.com) about his coverage; talked with pt about phishing attempts and encouraged him to reach out to the tech support group at his library for help. 
+- Pt asked us to also send results to her at @highlight(`cool_patient@gmail.com`)
+- Yuri Sharif, MD @highlight(`sharify@chop.edu`)
+- Pt reports he has received multiple alarming emails from @highlight(`medicaid@hotmail.com`) about his coverage; talked with pt about phishing attempts and encouraged him to reach out to the tech support group at his library for help. 
 
 When the email is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care, then it should also be checked as "GenericTemplate". 
 In the three examples above, the first two should just be labeled as EMAIL, and the third should be labeled as EMAIL and also checked as "GenericTemplate".
@@ -446,9 +446,9 @@ In the three examples above, the first two should just be labeled as EMAIL, and 
 Annotate every instance of a web address. 
 Examples of URLs, with the span bolded:
 
-- Instructed patient to review resources on our website @highlight(www.chop.edu/centers-programs/center-management-adhd)
-- Pt does hourly online transcription work at @highlight(www.rev.com)
-- As per national guidelines (@highlight(www.aap.org/)), screening should begin at age 3. 
+- Instructed patient to review resources on our website @highlight(`www.chop.edu/centers-programs/center-management-adhd`)
+- Pt does hourly online transcription work at @highlight(`www.rev.com`)
+- As per national guidelines (@highlight(`www.aap.org/`)), screening should begin at age 3. 
 
 When the URL is NOT related to the patient (or relatives, employer, or household members of the patient) or to the healthcare providers or facilities providing care, then it should also be checked as "GenericTemplate". 
 In the three examples above, the first two should just be labeled as WEB URLS, and the third should be labeled as WEB URLS and also checked as "GenericTemplate".
