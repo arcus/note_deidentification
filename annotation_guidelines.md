@@ -287,6 +287,10 @@ Here are examples of date components occurring in isolation, with the spans bold
 - First noticed rash in @highlight(March) 
 - Attempted corrective surgery in @highlight(1999) and again in @highlight(2003)
 
+When a date is broken up by intervening words (usually "of"), mark the components as separate spans: 
+
+- Pt began therapy in @highlight(May) of @highlight(2017)
+
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Why do we label partial dates?</b><br>
 
